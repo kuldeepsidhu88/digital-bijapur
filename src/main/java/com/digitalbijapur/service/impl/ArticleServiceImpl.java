@@ -6,6 +6,8 @@ import java.util.List;
 
 import com.digitalbijapur.domain.ArticleStatus;
 import com.digitalbijapur.exception.ArticleNotFoundException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.digitalbijapur.domain.Article;
@@ -13,6 +15,8 @@ import com.digitalbijapur.service.ArticleService;
 
 @Service
 public class ArticleServiceImpl implements ArticleService{
+
+	public static final Logger LOGGER = LoggerFactory.getLogger(ArticleServiceImpl.class);
 
 	@Override
 	public List<Article> findAllArticles() {
